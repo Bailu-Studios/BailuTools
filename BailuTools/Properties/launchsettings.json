@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "BailuTools (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "BailuTools (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
