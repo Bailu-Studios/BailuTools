@@ -1,4 +1,5 @@
 ﻿using BailuTools.Contracts.Services;
+using BailuTools.Pages;
 using BailuTools.ViewModels;
 using BailuTools.Views;
 
@@ -15,6 +16,7 @@ public class PageService : IPageService
     public PageService()
     {
         Configure<MainViewModel, MainPage>();
+        Configure<LoginMihoyoViewModel, LoginMihoyoPage>();
         Configure<ListDetailsViewModel, ListDetailsPage>();
         Configure<HoyoLabViewModel, HoyoLabPage>();
         Configure<SettingsViewModel, SettingsPage>();

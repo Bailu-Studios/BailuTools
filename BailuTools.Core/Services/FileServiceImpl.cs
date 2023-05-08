@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace BailuTools.Core.Services;
 
-public class FileService : IFileService
+public class FileServiceImpl : IFileService
 {
     public T Read<T>(string folderPath, string fileName)
     {

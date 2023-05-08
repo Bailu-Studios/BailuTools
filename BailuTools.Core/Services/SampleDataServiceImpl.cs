@@ -10,13 +10,10 @@ namespace BailuTools.Core.Services;
 // 3. Models/SampleCompany.cs
 // 4. Models/SampleOrder.cs
 // 5. Models/SampleOrderDetail.cs
-public class SampleDataService : ISampleDataService
+public class SampleDataServiceImpl : ISampleDataService
 {
     private List<SampleOrder> _allOrders;
 
-    public SampleDataService()
-    {
-    }
 
     private static IEnumerable<SampleOrder> AllOrders()
     {

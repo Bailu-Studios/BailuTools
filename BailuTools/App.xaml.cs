@@ -2,7 +2,6 @@
 using BailuTools.Contracts.Services;
 using BailuTools.Core.Contracts.Services;
 using BailuTools.Core.Services;
-using BailuTools.Helpers;
 using BailuTools.Models;
 using BailuTools.Services;
 using BailuTools.ViewModels;
@@ -65,8 +64,8 @@ public partial class App : Application
             services.AddSingleton<INavigationService, NavigationService>();
 
             // Core Services
-            services.AddSingleton<ISampleDataService, SampleDataService>();
-            services.AddSingleton<IFileService, FileService>();
+            services.AddSingleton<ISampleDataService, SampleDataServiceImpl>();
+            services.AddSingleton<IFileService, FileServiceImpl>();
 
             // Views and ViewModels
             services.AddTransient<SettingsViewModel>();
@@ -79,6 +78,8 @@ public partial class App : Application
             services.AddTransient<MainPage>();
             services.AddTransient<ShellPage>();
             services.AddTransient<ShellViewModel>();
+
+            services.AddTransient<LoginMihoyoViewModel>();
 
             // Configuration
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));
