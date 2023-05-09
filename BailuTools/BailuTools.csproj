@@ -40,6 +40,21 @@
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Resource Remove="View\ActPage\LoginMihoyoPage.xaml" />
+    <Resource Remove="View\HoyoLabPage.xaml" />
+    <Resource Remove="View\ListDetailsDetailControl.xaml" />
+    <Resource Remove="View\ListDetailsPage.xaml" />
+    <Resource Remove="View\MainPage.xaml" />
+    <Resource Remove="View\SettingsPage.xaml" />
+    <Resource Remove="View\ShellPage.xaml" />
+    <Resource Remove="Pages\LoginMihoyoPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contract\" />
+  </ItemGroup>
   
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>

@@ -1,6 +1,6 @@
-﻿using BailuTools.Contracts.Services;
-using BailuTools.ViewModels;
-using BailuTools.Views;
+﻿using BailuTools.Contract.Service;
+using BailuTools.ViewModel;
+using BailuTools.View;
 using Microsoft.UI.Xaml;
 
 namespace BailuTools.Activation;
