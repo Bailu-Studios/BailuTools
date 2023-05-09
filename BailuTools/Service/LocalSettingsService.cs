@@ -1,13 +1,12 @@
 ﻿using BailuTools.Contract.Service;
-using BailuTools.Core.Contracts.Services;
-using BailuTools.Core.Helpers;
+using BailuTools.Core.Helper;
 using BailuTools.Helper;
 using BailuTools.Model;
 
 using Microsoft.Extensions.Options;
 
-using Windows.ApplicationModel;
 using Windows.Storage;
+using BailuTools.Core.Contract.Service;
 
 namespace BailuTools.Service;
 

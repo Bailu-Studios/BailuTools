@@ -1,10 +1,8 @@
 ﻿using System.Text;
-
-using BailuTools.Core.Contracts.Services;
-
+using BailuTools.Core.Contract.Service;
 using Newtonsoft.Json;
 
-namespace BailuTools.Core.Services;
+namespace BailuTools.Core.Service;
 
 public class FileServiceImpl : IFileService
 {

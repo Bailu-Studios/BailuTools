@@ -1,5 +1,4 @@
-﻿using BailuTools.Core.Models;
-
+﻿using BailuTools.Core.Model;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 

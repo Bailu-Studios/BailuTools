@@ -1,7 +1,7 @@
 ﻿using BailuTools.Activation;
 using BailuTools.Contract.Service;
-using BailuTools.Core.Contracts.Services;
-using BailuTools.Core.Services;
+using BailuTools.Core.Contract.Service;
+using BailuTools.Core.Service;
 using BailuTools.Model;
 using BailuTools.Service;
 using BailuTools.ViewModel;

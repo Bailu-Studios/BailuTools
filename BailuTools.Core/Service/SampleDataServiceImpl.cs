@@ -1,7 +1,7 @@
-﻿using BailuTools.Core.Contracts.Services;
-using BailuTools.Core.Models;
+﻿using BailuTools.Core.Contract.Service;
+using BailuTools.Core.Model;
 
-namespace BailuTools.Core.Services;
+namespace BailuTools.Core.Service;
 
 // This class holds sample data used by some generated pages to show how they can be used.
 // TODO: The following classes have been created to display sample data. Delete these files once your app is using real data.

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BailuTools.Core.Helpers;
+namespace BailuTools.Core.Helper;
 
 public static class Json
 {

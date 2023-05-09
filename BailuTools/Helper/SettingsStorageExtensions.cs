@@ -1,4 +1,4 @@
-﻿using BailuTools.Core.Helpers;
+﻿using BailuTools.Core.Helper;
 
 using Windows.Storage;
 using Windows.Storage.Streams;

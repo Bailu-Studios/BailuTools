@@ -1,9 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 
 using BailuTools.Contract.ViewModel;
-using BailuTools.Core.Contracts.Services;
-using BailuTools.Core.Models;
-
+using BailuTools.Core.Contract.Service;
+using BailuTools.Core.Model;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace BailuTools.ViewModel;

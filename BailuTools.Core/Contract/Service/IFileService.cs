@@ -1,4 +1,4 @@
-﻿namespace BailuTools.Core.Contracts.Services;
+﻿namespace BailuTools.Core.Contract.Service;
 
 public interface IFileService
 {

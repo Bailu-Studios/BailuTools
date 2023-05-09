@@ -1,6 +1,6 @@
-﻿using BailuTools.Core.Models;
+﻿using BailuTools.Core.Model;
 
-namespace BailuTools.Core.Contracts.Services;
+namespace BailuTools.Core.Contract.Service;
 
 // Remove this class once your pages/features are using your data.
 public interface ISampleDataService

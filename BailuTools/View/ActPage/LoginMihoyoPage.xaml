@@ -4,9 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:BailuTools.ViewModel"
-    d:DataContext="{d:DesignInstance vm:LoginMihoyoViewModel}"
-
+    xmlns:behaviors="using:BailuTools.Behavior"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
     mc:Ignorable="d">
 
     <Grid Loaded="OnRootLoaded">
@@ -20,10 +19,11 @@
             VerticalAlignment="Center"
             Text="A"/>
         <Button
+            Grid.Row="0"
             Margin="16"
             HorizontalAlignment="Right"
             Click="CookieButtonClick"
             Content="B"/>
-        <WebView2 x:Name="WebView" Grid.Row="2"/>
+        <WebView2 x:Name="WebView" Grid.Row="1"/>
     </Grid>
 </Page>

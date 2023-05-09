@@ -43,13 +43,13 @@
 
   <ItemGroup>
     <Resource Remove="View\ActPage\LoginMihoyoPage.xaml" />
-    <Resource Remove="View\HoyoLabPage.xaml" />
-    <Resource Remove="View\ListDetailsDetailControl.xaml" />
-    <Resource Remove="View\ListDetailsPage.xaml" />
-    <Resource Remove="View\MainPage.xaml" />
-    <Resource Remove="View\SettingsPage.xaml" />
+    <Resource Remove="View\ActPage\HoyoLabPage.xaml" />
+    <Resource Remove="View\ActPage\ListDetailsDetailControl.xaml" />
+    <Resource Remove="View\ActPage\ListDetailsPage.xaml" />
+    <Resource Remove="View\ActPage\LoginMihoyoPage.xaml" />
+    <Resource Remove="View\ActPage\MainPage.xaml" />
+    <Resource Remove="View\ActPage\SettingsPage.xaml" />
     <Resource Remove="View\ShellPage.xaml" />
-    <Resource Remove="Pages\LoginMihoyoPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
