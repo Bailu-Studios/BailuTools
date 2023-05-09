@@ -4,7 +4,7 @@ using CommunityToolkit.WinUI.UI.Controls;
 
 using Microsoft.UI.Xaml.Controls;
 
-namespace BailuTools.View;
+namespace BailuTools.View.ActPage;
 
 public sealed partial class ListDetailsPage : Page
 {

@@ -5,7 +5,6 @@
     xmlns:helpers="using:BailuTools.Helper"
     xmlns:behaviors="using:BailuTools.Behavior"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
-    xmlns:view="using:BailuTools.View"
     xmlns:page="using:BailuTools.View.ActPage"
     xmlns:ext="using:BailuTools.Extension"
     Loaded="OnLoaded">
@@ -46,7 +45,7 @@
                 -->
                 <NavigationViewItem
                     x:Uid="Shell_Main"
-                    helpers:NavigationHelper.NavigateTo="view:MainPage"
+                    helpers:NavigationHelper.NavigateTo="page:MainPage"
                     Icon="{ext:FontIcon Glyph=&#xe7c3;}"
                 />
                 
@@ -59,13 +58,13 @@
                 
                 <NavigationViewItem
                     x:Uid="Shell_ListDetails"
-                    helpers:NavigationHelper.NavigateTo="view:ListDetailsPage"
+                    helpers:NavigationHelper.NavigateTo="page:ListDetailsPage"
                     Icon="{ext:FontIcon Glyph=&#xea37;}"
                 />
                 
                 <NavigationViewItem
                     x:Uid="Shell_HoyoLab"
-                    helpers:NavigationHelper.NavigateTo="view:HoyoLabPage"
+                    helpers:NavigationHelper.NavigateTo="page:HoyoLabPage"
                     Icon="{ext:FontIcon Glyph=&#xe774;}"
                 />
             </NavigationView.MenuItems>

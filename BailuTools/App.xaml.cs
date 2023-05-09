@@ -6,6 +6,7 @@ using BailuTools.Model;
 using BailuTools.Service;
 using BailuTools.ViewModel;
 using BailuTools.View;
+using BailuTools.View.ActPage;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

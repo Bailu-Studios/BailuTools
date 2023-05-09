@@ -2,7 +2,7 @@
 
 using BailuTools.Contract.Service;
 using BailuTools.Helper;
-using BailuTools.View;
+using BailuTools.View.ActPage;
 using Microsoft.UI.Xaml.Controls;
 
 namespace BailuTools.Service;
