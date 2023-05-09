@@ -1,11 +1,11 @@
 ﻿using BailuTools.Activation;
-using BailuTools.Contracts.Services;
+using BailuTools.Contract.Service;
 using BailuTools.Core.Contracts.Services;
 using BailuTools.Core.Services;
-using BailuTools.Models;
-using BailuTools.Services;
-using BailuTools.ViewModels;
-using BailuTools.Views;
+using BailuTools.Model;
+using BailuTools.Service;
+using BailuTools.ViewModel;
+using BailuTools.View;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -60,7 +60,6 @@ public partial class App : Application
             services.AddTransient<INavigationViewService, NavigationViewService>();
 
             services.AddSingleton<IActivationService, ActivationService>();
-            services.AddSingleton<IPageService, PageService>();
             services.AddSingleton<INavigationService, NavigationService>();
 
             // Core Services
