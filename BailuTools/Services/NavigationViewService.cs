@@ -2,8 +2,7 @@
 
 using BailuTools.Contracts.Services;
 using BailuTools.Helpers;
-using BailuTools.ViewModels;
-
+using BailuTools.Views;
 using Microsoft.UI.Xaml.Controls;
 
 namespace BailuTools.Services;
@@ -12,18 +11,15 @@ public class NavigationViewService : INavigationViewService
 {
     private readonly INavigationService _navigationService;
 
-    private readonly IPageService _pageService;
-
     private NavigationView? _navigationView;
 
     public IList<object>? MenuItems => _navigationView?.MenuItems;
 
     public object? SettingsItem => _navigationView?.SettingsItem;
 
-    public NavigationViewService(INavigationService navigationService, IPageService pageService)
+    public NavigationViewService(INavigationService navigationService)
     {
         _navigationService = navigationService;
-        _pageService = pageService;
     }
 
     [MemberNotNull(nameof(_navigationView))]
@@ -59,13 +55,13 @@ public class NavigationViewService : INavigationViewService
     {
         if (args.IsSettingsInvoked)
         {
-            _navigationService.NavigateTo(typeof(SettingsViewModel).FullName!);
+            _navigationService.NavigateTo(typeof(SettingsPage));
         }
         else
         {
             var selectedItem = args.InvokedItemContainer as NavigationViewItem;
 
-            if (selectedItem?.GetValue(NavigationHelper.NavigateToProperty) is string pageKey)
+            if (selectedItem?.GetValue(NavigationHelper.NavigateToProperty) is Type pageKey)
             {
                 _navigationService.NavigateTo(pageKey);
             }
@@ -91,13 +87,10 @@ public class NavigationViewService : INavigationViewService
         return null;
     }
 
-    private bool IsMenuItemForPageType(NavigationViewItem menuItem, Type sourcePageType)
-    {
-        if (menuItem.GetValue(NavigationHelper.NavigateToProperty) is string pageKey)
-        {
-            return _pageService.GetPageType(pageKey) == sourcePageType;
+    private bool IsMenuItemForPageType(NavigationViewItem menuItem, Type sourcePageType) {
+        if (menuItem.GetValue(NavigationHelper.NavigateToProperty) is Type pageType) {
+            return pageType == sourcePageType;
         }
-
         return false;
     }
 }

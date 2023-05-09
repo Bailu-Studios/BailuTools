@@ -6,6 +6,7 @@
     xmlns:behaviors="using:BailuTools.Behaviors"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:vm="using:BailuTools.ViewModels"
+    xmlns:view="using:BailuTools.Views"
     xmlns:page="using:BailuTools.Pages"
     xmlns:ext="using:BailuTools.Extension"
     Loaded="OnLoaded">
@@ -44,29 +45,30 @@
                 TODO: Update item icons by updating FontIcon.Glyph properties.
                 https://docs.microsoft.com/windows/apps/design/style/segoe-fluent-icons-font#icon-list
                 -->
-                <NavigationViewItem x:Uid="Shell_Main" helpers:NavigationHelper.NavigateTo="BailuTools.ViewModels.MainViewModel">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe7c3;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
+                <NavigationViewItem
+                    x:Uid="Shell_Main"
+                    helpers:NavigationHelper.NavigateTo="view:MainPage"
+                    Icon="{ext:FontIcon Glyph=&#xe7c3;}"
+                />
                 
                 <NavigationViewItem
                     x:Uid="Shell_Test"
-                    helpers:NavHelper.NavigateTo="page:LoginMihoyoPage"
+                    helpers:NavigationHelper.NavigateTo="page:LoginMihoyoPage"
                     Content="ABC"
                     Icon="{ext:FontIcon Glyph=&#xe7c3;}"
                 />
                 
-                <NavigationViewItem x:Uid="Shell_ListDetails" helpers:NavigationHelper.NavigateTo="BailuTools.ViewModels.ListDetailsViewModel">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xea37;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Uid="Shell_HoyoLab" helpers:NavigationHelper.NavigateTo="BailuTools.ViewModels.HoyoLabViewModel">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe774;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
+                <NavigationViewItem
+                    x:Uid="Shell_ListDetails"
+                    helpers:NavigationHelper.NavigateTo="view:ListDetailsPage"
+                    Icon="{ext:FontIcon Glyph=&#xea37;}"
+                />
+                
+                <NavigationViewItem
+                    x:Uid="Shell_HoyoLab"
+                    helpers:NavigationHelper.NavigateTo="view:HoyoLabPage"
+                    Icon="{ext:FontIcon Glyph=&#xe774;}"
+                />
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>
                 <DataTemplate>

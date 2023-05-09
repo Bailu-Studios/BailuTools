@@ -13,7 +13,6 @@ namespace BailuTools.Services;
 // https://github.com/microsoft/TemplateStudio/blob/main/docs/WinUI/navigation.md
 public class NavigationService : INavigationService
 {
-    private readonly IPageService _pageService;
     private object? _lastParameterUsed;
     private Frame? _frame;
 
@@ -42,11 +41,6 @@ public class NavigationService : INavigationService
 
     [MemberNotNullWhen(true, nameof(Frame), nameof(_frame))]
     public bool CanGoBack => Frame != null && Frame.CanGoBack;
-
-    public NavigationService(IPageService pageService)
-    {
-        _pageService = pageService;
-    }
 
     private void RegisterFrameEvents()
     {
@@ -81,20 +75,14 @@ public class NavigationService : INavigationService
         return false;
     }
 
-    public bool NavigateTo(string pageKey, object? parameter = null, bool clearNavigation = false)
-    {
-        var pageType = _pageService.GetPageType(pageKey);
-
-        if (_frame != null && (_frame.Content?.GetType() != pageType || (parameter != null && !parameter.Equals(_lastParameterUsed))))
-        {
+    public bool NavigateTo(Type pageType, object? parameter = null, bool clearNavigation = false) {
+        if (_frame != null && (_frame.Content?.GetType() != pageType || (parameter != null && !parameter.Equals(_lastParameterUsed)))) {
             _frame.Tag = clearNavigation;
             var vmBeforeNavigation = _frame.GetPageViewModel();
             var navigated = _frame.Navigate(pageType, parameter);
-            if (navigated)
-            {
+            if (navigated) {
                 _lastParameterUsed = parameter;
-                if (vmBeforeNavigation is INavigationAware navigationAware)
-                {
+                if (vmBeforeNavigation is INavigationAware navigationAware) {
                     navigationAware.OnNavigatedFrom();
                 }
             }
