@@ -2,6 +2,7 @@
 using BailuTools.Contract.Service;
 using BailuTools.Core.Contract.Service;
 using BailuTools.Core.Service;
+using BailuTools.Core.Web;
 using BailuTools.Model;
 using BailuTools.Service;
 using BailuTools.ViewModel;
@@ -80,6 +81,8 @@ public partial class App : Application
             services.AddTransient<ShellViewModel>();
 
             services.AddTransient<LoginMihoyoViewModel>();
+            
+            services.AddTransient<AuthClient>();
 
             // Configuration
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));

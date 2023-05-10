@@ -1,4 +1,7 @@
-﻿using BailuTools.ViewModel;
+﻿using System.Diagnostics;
+using BailuTools.Core.Service;
+using BailuTools.Core.Test;
+using BailuTools.ViewModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
@@ -38,8 +41,7 @@ internal sealed partial class LoginMihoyoPage : Page {
         }
     }
     
-    private void CookieButtonClick(object sender, RoutedEventArgs e)
-    {
-        
+    private void CookieButtonClick(object sender, RoutedEventArgs e) {
+        MhyTokenService.HandleCurrentCookieAsync(WebView).ConfigureAwait(false);
     }
 }

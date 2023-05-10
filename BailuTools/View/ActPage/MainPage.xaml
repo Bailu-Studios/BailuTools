@@ -7,6 +7,10 @@
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
-        
+        <Button
+            Margin="16"
+            HorizontalAlignment="Center"
+            Click="BtnClick"
+            Content="测试按钮"/>
     </Grid>
 </Page>
