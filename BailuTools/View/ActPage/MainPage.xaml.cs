@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using BailuTools.Core.Test;
-using BailuTools.ViewModel;
+﻿using BailuTools.ViewModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 

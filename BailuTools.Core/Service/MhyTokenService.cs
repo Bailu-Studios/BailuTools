@@ -4,8 +4,8 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace BailuTools.Core.Service;
 
-public class MhyTokenService {
-    private static AuthClient _client = new();
+public static class MhyTokenService {
+    private static readonly AuthClient _client = new();
 
     public static async Task HandleCurrentCookieAsync(WebView2 webView, CancellationToken token = default) {
         try {
@@ -30,11 +30,11 @@ public class MhyTokenService {
             var mid = stokenV2.GetValueOrDefault(Cookie.MID);
             stokenV2.TryGetSToken(out Cookie? stoken);
 
-            Debug.WriteLine(stoken);
+            Debug.WriteLine(stoken); // TODO 写入到用户数据库
             Debug.WriteLine(stokenV2.TryGetLToken(out Cookie? ltoken) ? ltoken : "Null LToken");
             Debug.WriteLine(stokenV2.TryGetCookieToken(out Cookie? cookieToken) ? cookieToken : "Null Cookie Token");
         } catch (KeyNotFoundException) {
-            Debug.WriteLine("未登录");
+            Debug.WriteLine("未登录"); // TODO 弹出窗口提示
             throw;
         }catch (Exception e) {
             Debug.WriteLine(e);
